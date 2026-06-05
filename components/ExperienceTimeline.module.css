@@ -1,6 +1,6 @@
 .section {
   padding: 100px 0;
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
 }
 
 .layout {
@@ -162,6 +162,13 @@
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
+  transition: all var(--transition);
+}
+
+.certsCard:hover,
+.eduCard:hover {
+  border-color: var(--border-accent);
+  background: var(--bg-card-hover);
 }
 
 .certsTitle {
@@ -183,6 +190,17 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
+}
+
+.cert:hover {
+  background: var(--accent-glow);
+}
+
+.cert:hover .certName {
+  color: var(--text-primary);
 }
 
 .certBadge {
@@ -211,11 +229,22 @@
   display: flex;
   flex-direction: column;
   gap: 3px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
 }
 
 .edu:last-child {
   margin-bottom: 0;
+}
+
+.edu:hover {
+  background: var(--accent-glow);
+}
+
+.edu:hover .degree {
+  color: var(--accent);
 }
 
 .degree {

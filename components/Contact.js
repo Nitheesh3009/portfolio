@@ -1,6 +1,10 @@
+"use client";
+import { useState } from "react";
 import styles from "./Contact.module.css";
 
 export default function Contact() {
+  const [phoneRevealed, setPhoneRevealed] = useState(false);
+
   return (
     <section id="contact" className={styles.section}>
       <div className="container">
@@ -33,12 +37,30 @@ export default function Contact() {
               </svg>
               LinkedIn Profile
             </a>
-            <a href="tel:9407582747" className={styles.link}>
-              <svg viewBox="0 0 20 20" fill="none">
-                <path d="M4 4h3l1.5 3.5-1.5 1a9 9 0 004.5 4.5l1-1.5L16 13v3a1 1 0 01-1 1A13 13 0 013 5a1 1 0 011-1z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-              </svg>
-              (940) 758-2747
-            </a>
+            <div className={styles.phoneSlot}>
+              <button
+                className={styles.link}
+                onClick={() => setPhoneRevealed(true)}
+                style={{ opacity: phoneRevealed ? 0 : 1, pointerEvents: phoneRevealed ? "none" : "auto" }}
+                aria-hidden={phoneRevealed}
+              >
+                <svg viewBox="0 0 20 20" fill="none">
+                  <path d="M4 4h3l1.5 3.5-1.5 1a9 9 0 004.5 4.5l1-1.5L16 13v3a1 1 0 01-1 1A13 13 0 013 5a1 1 0 011-1z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+                </svg>
+                Show Phone Number
+              </button>
+              <a
+                href="tel:9407582747"
+                className={styles.link}
+                style={{ opacity: phoneRevealed ? 1 : 0, pointerEvents: phoneRevealed ? "auto" : "none" }}
+                aria-hidden={!phoneRevealed}
+              >
+                <svg viewBox="0 0 20 20" fill="none">
+                  <path d="M4 4h3l1.5 3.5-1.5 1a9 9 0 004.5 4.5l1-1.5L16 13v3a1 1 0 01-1 1A13 13 0 013 5a1 1 0 011-1z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+                </svg>
+                (940) 758-2747
+              </a>
+            </div>
           </div>
 
           <div className={styles.location}>
@@ -46,7 +68,12 @@ export default function Contact() {
               <path d="M10 2a6 6 0 016 6c0 4-6 10-6 10S4 12 4 8a6 6 0 016-6z" stroke="var(--text-muted)" strokeWidth="1.5" />
               <circle cx="10" cy="8" r="2" stroke="var(--text-muted)" strokeWidth="1.5" />
             </svg>
-            Dallas, Texas — Open to Remote &amp; Hybrid roles
+            Dallas, Texas
+          </div>
+          <div className={styles.locationBadges}>
+            <span className={styles.badge}>Onsite</span>
+            <span className={styles.badge}>Hybrid</span>
+            <span className={styles.badge}>Open to Relocation</span>
           </div>
         </div>
       </div>

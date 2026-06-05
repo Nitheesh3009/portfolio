@@ -1,6 +1,6 @@
 .section {
   padding: 100px 0;
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   position: relative;
   overflow: hidden;
 }
@@ -55,8 +55,11 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   font-size: 0.875rem;
+  font-family: var(--font-sans);
   color: var(--text-secondary);
+  white-space: nowrap;
   transition: all var(--transition);
+  cursor: pointer;
 }
 
 .link svg {
@@ -71,10 +74,40 @@
   background: var(--accent-glow);
 }
 
+.phoneSlot {
+  display: grid;
+  grid-template-areas: "phone";
+}
+
+.phoneSlot > * {
+  grid-area: phone;
+  transition: opacity var(--transition);
+}
+
 .location {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-size: 0.8rem;
   color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.locationBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  background: var(--accent-glow);
+  border: 1px solid var(--border-accent);
+  border-radius: 100px;
+  padding: 3px 12px;
+  letter-spacing: 0.04em;
 }
