@@ -1,0 +1,33 @@
+.footer {
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.copy {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.links a {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.links a:hover {
+  color: var(--accent);
+}

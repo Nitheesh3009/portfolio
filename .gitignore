@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# sensitive — personal resume with PII (phone, address, email)
+Nitheesh_resume
+
+# internal planning/AI config docs — not part of the deployable site
+portfolio_from_resume.md
+AGENTS.md
+CLAUDE.md
