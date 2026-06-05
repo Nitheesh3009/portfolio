@@ -13,8 +13,8 @@ const badges = [
 const stats = [
   { value: "40%", label: "Faster Release Cadence" },
   { value: "90%", label: "CVE Reduction" },
-  { value: "90%", label: "Compute Cost Savings" },
-  { value: "99.9%", label: "Uptime Maintained" },
+  { value: "40%", label: "Compute Cost Savings" },
+  { value: "99.8%", label: "Uptime Maintained" },
 ];
 
 export default function Hero() {
