@@ -30,7 +30,7 @@ const experience = [
     tags: ["AWS", "Jenkins", "Docker", "Terraform", "Ansible", "EKS", "Python"],
   },
   {
-    role: "Software Engineer",
+    role: "Junior Software Engineer",
     company: "CBIZSOFT India Private Limited",
     period: "Oct 2017 – May 2019",
     location: "Hyderabad, India",
