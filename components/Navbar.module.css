@@ -85,6 +85,23 @@
   color: var(--bg-primary);
 }
 
+.hireBtn {
+  padding: 8px 20px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-radius: var(--radius-sm);
+  transition: opacity var(--transition), transform var(--transition);
+  box-shadow: 0 2px 12px #00d4ff30;
+  margin-left: 4px;
+}
+
+.hireBtn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
 .burger {
   display: none;
   flex-direction: column;
@@ -133,6 +150,13 @@
   .resumeBtn {
     margin-left: 0;
     margin-top: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hireBtn {
+    margin-left: 0;
+    margin-top: 8px;
     width: 100%;
     text-align: center;
   }

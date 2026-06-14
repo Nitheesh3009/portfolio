@@ -95,11 +95,14 @@ export default function Hero() {
         </p>
 
         <div className={styles.ctas}>
-          <a href="#projects" className={styles.ctaPrimary}>
-            Explore Infrastructure Projects
+          <a href="#contact" className={styles.ctaPrimary}>
+            Hire Me
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M8 1a3 3 0 1 1 0 6A3 3 0 0 1 8 1zM2 13c0-2.8 2.7-5 6-5s6 2.2 6 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
+          </a>
+          <a href="#projects" className={styles.ctaSecondary}>
+            Explore Infrastructure Projects
           </a>
           <a href="/Nitheesh_Edla_Resume.pdf" download className={styles.ctaSecondary}>
             Download Resume (PDF)

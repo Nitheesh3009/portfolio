@@ -41,6 +41,13 @@ export default function Navbar() {
           >
             Download Resume
           </a>
+          <a
+            href="#contact"
+            className={styles.hireBtn}
+            onClick={() => setOpen(false)}
+          >
+            Hire Me
+          </a>
         </nav>
 
         <button
