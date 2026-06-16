@@ -5,6 +5,7 @@ import ExperienceTimeline from "@/components/ExperienceTimeline";
 import SkillsGrid from "@/components/SkillsGrid";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ChatbotButton from "@/components/ChatbotButton";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ChatbotButton />
     </>
   );
 }
