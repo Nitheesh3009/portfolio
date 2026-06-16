@@ -33,7 +33,7 @@ export default function ChatbotButton() {
             </div>
             <p className={styles.statusText}>Chatbot build in progress</p>
             <p className={styles.statusSub}>
-              An AI assistant powered by Claude is coming soon to answer questions about my experience and projects.
+              An AI assistant is coming soon to answer questions about my experience and projects.
             </p>
             <div className={styles.progressBar}>
               <div className={styles.progressFill} />
