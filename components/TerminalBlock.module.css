@@ -1,0 +1,87 @@
+.terminal {
+  background: #0a0f1a;
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 212, 255, 0.08), 0 2px 16px rgba(0,0,0,0.5);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #111827;
+  border-bottom: 1px solid var(--border);
+}
+
+.dotRed    { width: 10px; height: 10px; border-radius: 50%; background: #ff5f57; flex-shrink: 0; }
+.dotYellow { width: 10px; height: 10px; border-radius: 50%; background: #ffbd2e; flex-shrink: 0; }
+.dotGreen  { width: 10px; height: 10px; border-radius: 50%; background: #28c840; flex-shrink: 0; }
+
+.barTitle {
+  margin-left: 8px;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.body {
+  padding: 16px;
+  min-height: 148px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.out {
+  color: #94a3b8;
+  line-height: 1.55;
+  white-space: pre;
+  overflow: hidden;
+  animation: fadeIn 0.15s ease both;
+}
+
+.dim       { color: #4a5a70; }
+.accentOut { color: var(--accent); }
+.successOut { color: #10b981; }
+
+.promptRow {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.ps {
+  color: #10b981;
+  font-weight: 700;
+}
+
+.cmdText {
+  color: #e2e8f0;
+}
+
+.cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background: var(--accent);
+  margin-left: 1px;
+  border-radius: 1px;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .terminal { font-size: 0.7rem; }
+  .out { white-space: normal; word-break: break-all; }
+}

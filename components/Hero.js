@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useRef } from "react";
 import styles from "./Hero.module.css";
+import TerminalBlock from "./TerminalBlock";
+import YamlResume from "./YamlResume";
 
 const badges = [
   "7+ Years Exp",
@@ -75,38 +77,48 @@ export default function Hero() {
       <div className={styles.grid} aria-hidden="true" />
 
       <div className={`container ${styles.content}`}>
-        <div className={styles.badgeRow}>
-          {badges.map((b) => (
-            <span key={b} className={styles.badge}>{b}</span>
-          ))}
-        </div>
+        <div className={styles.twoCol}>
+          <div className={styles.left}>
+            <div className={styles.badgeRow}>
+              {badges.map((b) => (
+                <span key={b} className={styles.badge}>{b}</span>
+              ))}
+            </div>
 
-        <h1 className={styles.headline}>
-          Automating Scale,{" "}
-          <span className={styles.accent}>Securing Workloads,</span>
-          <br />
-          Optimizing Cloud Systems.
-        </h1>
+            <h1 className={styles.headline}>
+              Automating Scale,{" "}
+              <span className={styles.accent}>Securing Workloads,</span>
+              <br />
+              Optimizing Cloud Systems.
+            </h1>
 
-        <p className={styles.sub}>
-          Hi, I&apos;m <strong>Nitheesh Edla</strong>. A Cloud &amp; DevOps
-          Engineer with 7+ years of experience designing secure, multi-cloud
-          (AWS, Azure, GCP) architectures and automating delivery pipelines.
-        </p>
+            <p className={styles.sub}>
+              Hi, I&apos;m <strong>Nitheesh Edla</strong>. A Cloud &amp; DevOps
+              Engineer with 7+ years of experience designing secure, multi-cloud
+              (AWS, Azure, GCP) architectures and automating delivery pipelines.
+            </p>
 
-        <div className={styles.ctas}>
-          <a href="#contact" className={styles.ctaPrimary}>
-            Hire Me
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M8 1a3 3 0 1 1 0 6A3 3 0 0 1 8 1zM2 13c0-2.8 2.7-5 6-5s6 2.2 6 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </a>
-          <a href="#projects" className={styles.ctaSecondary}>
-            Explore Infrastructure Projects
-          </a>
-          <a href="/Nitheesh_Edla_Resume.pdf" download className={styles.ctaSecondary}>
-            Download Resume (PDF)
-          </a>
+            <div className={styles.ctas}>
+              <a href="#contact" className={styles.ctaPrimary}>
+                Hire Me
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M8 1a3 3 0 1 1 0 6A3 3 0 0 1 8 1zM2 13c0-2.8 2.7-5 6-5s6 2.2 6 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+              <a href="#projects" className={styles.ctaSecondary}>
+                Explore Infrastructure Projects
+              </a>
+              <a href="/Nitheesh_Edla_Resume.pdf" download className={styles.ctaSecondary}>
+                Download Resume (PDF)
+              </a>
+            </div>
+
+            <YamlResume />
+          </div>
+
+          <div className={styles.right}>
+            <TerminalBlock />
+          </div>
         </div>
 
         <div className={styles.statsRow}>

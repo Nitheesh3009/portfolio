@@ -193,6 +193,8 @@
   padding: 8px;
   border-radius: var(--radius-sm);
   transition: background var(--transition);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .cert:hover {
@@ -201,6 +203,10 @@
 
 .cert:hover .certName {
   color: var(--text-primary);
+}
+
+.cert:hover .certVerify {
+  opacity: 1;
 }
 
 .certBadge {
@@ -219,10 +225,25 @@
   line-height: 1.2;
 }
 
+.certInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .certName {
   font-size: 0.8rem;
   color: var(--text-secondary);
   line-height: 1.4;
+  transition: color var(--transition);
+}
+
+.certVerify {
+  font-size: 0.68rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  opacity: 0;
+  transition: opacity var(--transition);
 }
 
 .edu {

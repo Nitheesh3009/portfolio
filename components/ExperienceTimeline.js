@@ -46,10 +46,30 @@ const experience = [
 ];
 
 const certifications = [
-  { name: "Certified Kubernetes Administrator", abbr: "CKA", color: "#326CE5" },
-  { name: "AWS Solutions Architect – Associate", abbr: "SAA-C03", color: "#FF9900" },
-  { name: "AZ-400: DevOps Engineer Expert", abbr: "AZ-400", color: "#0078D4" },
-  { name: "AZ-104: Azure Administrator", abbr: "AZ-104", color: "#0078D4" },
+  {
+    name: "Certified Kubernetes Administrator",
+    abbr: "CKA",
+    color: "#326CE5",
+    verify: "https://www.credly.com/org/the-linux-foundation/badge/certified-kubernetes-administrator",
+  },
+  {
+    name: "AWS Solutions Architect – Associate",
+    abbr: "SAA-C03",
+    color: "#FF9900",
+    verify: "https://www.credly.com/org/amazon-web-services/badge/aws-certified-solutions-architect-associate",
+  },
+  {
+    name: "AZ-400: DevOps Engineer Expert",
+    abbr: "AZ-400",
+    color: "#0078D4",
+    verify: "https://www.credly.com/org/microsoft-certification/badge/microsoft-certified-devops-engineer-expert",
+  },
+  {
+    name: "AZ-104: Azure Administrator",
+    abbr: "AZ-104",
+    color: "#0078D4",
+    verify: "https://www.credly.com/org/microsoft-certification/badge/microsoft-certified-azure-administrator-associate",
+  },
 ];
 
 export default function ExperienceTimeline() {
@@ -95,12 +115,22 @@ export default function ExperienceTimeline() {
               <h3 className={styles.certsTitle}>Certifications</h3>
               <div className={styles.certsList}>
                 {certifications.map((c) => (
-                  <div key={c.abbr} className={styles.cert}>
+                  <a
+                    key={c.abbr}
+                    href={c.verify}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.cert}
+                    title={`Verify ${c.name} on Credly`}
+                  >
                     <div className={styles.certBadge} style={{ background: `${c.color}20`, borderColor: `${c.color}40` }}>
                       <span style={{ color: c.color }}>{c.abbr}</span>
                     </div>
-                    <span className={styles.certName}>{c.name}</span>
-                  </div>
+                    <div className={styles.certInfo}>
+                      <span className={styles.certName}>{c.name}</span>
+                      <span className={styles.certVerify}>Verify on Credly ↗</span>
+                    </div>
+                  </a>
                 ))}
               </div>
             </div>
