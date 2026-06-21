@@ -56,7 +56,7 @@ const certifications = [
     name: "AWS Solutions Architect – Associate",
     abbr: "SAA-C03",
     color: "#FF9900",
-    verify: "https://www.credly.com/org/amazon-web-services/badge/aws-certified-solutions-architect-associate",
+    verify: "https://www.credly.com/badges/8df4bfb7-1d25-4b7d-9391-0293ca76237c/linked_in_profile",
   },
   {
     name: "AZ-400: DevOps Engineer Expert",
