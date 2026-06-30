@@ -26,16 +26,17 @@ const projects = [
     tech: ["AKS", "EKS", "Azure SQL", "Azure AD", "IAM", "VNets", "NSGs", "Blob Storage"],
   },
   {
-    category: "Platform Engineering",
-    title: "Self-Service Infrastructure & Incident Remediation Tooling",
+    category: "SRE · Platform Engineering",
+    title: "Reliability & Self-Service Developer Platform",
     concept:
-      "Internal Python-based automation tooling to eliminate manual toil and accelerate incident response.",
+      "SRE-driven internal developer platform with self-service infrastructure APIs, SLO-based alerting, and automated incident response — eliminating toil and improving MTTR.",
     outcomes: [
-      "Built REST APIs using <strong>FastAPI & Flask</strong> for self-service infrastructure operations and automated runbook trigger scripts.",
-      "Developed a custom <strong>Prometheus exporter</strong> and Slack-integrated incident bot, reducing toil by <strong>30%</strong>.",
-      "Led P1 incident response with blameless postmortems and runbooks, reducing resolution time by <strong>25%</strong>.",
+      "Defined <strong>SLOs and error budgets</strong> for 5 production services; built SLI dashboards in Grafana tracking availability, latency p99, and error rate.",
+      "Built self-service REST APIs (<strong>FastAPI & Flask</strong>) enabling teams to provision infra, trigger runbooks, and manage on-call schedules without platform team intervention.",
+      "Developed a custom <strong>Prometheus exporter</strong> and Slack-integrated incident bot enforcing error budget policies — reduced toil by <strong>30%</strong> and MTTR by <strong>25%</strong>.",
+      "Led blameless P1 postmortems and authored runbooks adopted as golden-path incident playbooks across teams.",
     ],
-    tech: ["Python", "FastAPI", "Flask", "Prometheus", "Grafana", "Boto3", "Slack API"],
+    tech: ["Python", "FastAPI", "Flask", "Prometheus", "Grafana", "Loki", "Boto3", "Slack API", "PagerDuty"],
   },
   {
     category: "Serverless",

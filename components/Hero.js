@@ -16,7 +16,7 @@ const stats = [
   { value: "40%", label: "Faster Release Cadence" },
   { value: "90%", label: "CVE Reduction" },
   { value: "40%", label: "Compute Cost Savings" },
-  { value: "99.8%", label: "Uptime Maintained" },
+  { value: "99.8%", label: "Uptime SLO Met" },
 ];
 
 export default function Hero() {
@@ -93,9 +93,10 @@ export default function Hero() {
             </h1>
 
             <p className={styles.sub}>
-              Hi, I&apos;m <strong>Nitheesh Edla</strong>. A Cloud &amp; DevOps
+              Hi, I&apos;m <strong>Nitheesh Edla</strong>. A Cloud, DevOps &amp; SRE
               Engineer with 7+ years of experience designing secure, multi-cloud
-              (AWS, Azure, GCP) architectures and automating delivery pipelines.
+              (AWS, Azure, GCP) architectures, automating delivery pipelines, and
+              building self-service platforms that improve developer velocity and reliability.
             </p>
 
             <div className={styles.ctas}>

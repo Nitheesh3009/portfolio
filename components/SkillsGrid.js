@@ -37,6 +37,16 @@ const categories = [
     skills: ["Python", "Flask", "FastAPI", "Boto3", "Shell/Bash", "Go", "Java"],
   },
   {
+    name: "SRE & Reliability",
+    icon: "🔁",
+    skills: ["SLO/SLI/Error Budgets", "Incident Management", "Blameless Postmortems", "Chaos Engineering", "PagerDuty", "MTTR Reduction", "Runbook Automation"],
+  },
+  {
+    name: "Platform Engineering",
+    icon: "🛠️",
+    skills: ["Internal Developer Platforms", "Self-Service APIs", "Golden Path Templates", "DORA Metrics", "Developer Portals", "Policy as Code"],
+  },
+  {
     name: "Databases",
     icon: "🗄️",
     skills: ["MySQL", "MongoDB", "Amazon RDS", "DynamoDB", "Azure SQL", "Elasticsearch"],

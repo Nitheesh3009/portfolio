@@ -30,7 +30,7 @@ const yaml = [
   { t: "success", text: "    uptime: 99.8%" },
   { t: "key", text: "status:" },
   { t: "success", text: "  phase: OpenToWork" },
-  { t: "val", text: "  roles: [Cloud Engineer, DevOps Enginner, SRE]" },
+  { t: "val", text: "  roles: [Cloud Engineer, DevOps Engineer, SRE, Platform Engineer]" },
   { t: "val", text: "  workMode: [Onsite, Hybrid, Remote]" },
 ];
 
