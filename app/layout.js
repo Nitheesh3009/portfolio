@@ -14,9 +14,44 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Nitheesh Edla — Cloud & DevOps Engineer",
+  title: "Nitheesh Edla — Cloud, DevOps & SRE Engineer",
   description:
-    "Cloud & DevOps Engineer with 7+ years designing secure multi-cloud architectures, automating delivery pipelines, and driving measurable infrastructure outcomes.",
+    "Cloud, DevOps & SRE Engineer with 7+ years building secure multi-cloud infrastructure (AWS, Azure, GCP), automating CI/CD pipelines, defining SLOs, and delivering self-service developer platforms. CKA, AWS SAA-C03, AZ-400 certified. Based in Dallas, TX — open to Cloud Engineer, DevOps, SRE, and Platform Engineer roles.",
+  keywords: [
+    "Cloud Engineer",
+    "DevOps Engineer",
+    "SRE",
+    "Site Reliability Engineer",
+    "Platform Engineer",
+    "Kubernetes",
+    "Terraform",
+    "AWS",
+    "Azure",
+    "GCP",
+    "CI/CD",
+    "Infrastructure as Code",
+    "CKA",
+    "Dallas Texas",
+    "Nitheesh Edla",
+  ],
+  authors: [{ name: "Nitheesh Edla" }],
+  openGraph: {
+    title: "Nitheesh Edla — Cloud, DevOps & SRE Engineer",
+    description:
+      "7+ years building secure multi-cloud infrastructure, automating delivery pipelines, and improving reliability through SLOs and self-service platforms. CKA · AWS SAA-C03 · AZ-400.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: "Nitheesh Edla — Cloud, DevOps & SRE Engineer",
+    description:
+      "7+ years building secure multi-cloud infrastructure, automating delivery pipelines, and improving reliability through SLOs and self-service platforms.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {
