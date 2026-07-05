@@ -69,6 +69,24 @@
   background: var(--accent-glow);
 }
 
+.linkActive {
+  color: var(--accent);
+  background: var(--accent-glow);
+  position: relative;
+}
+
+.linkActive::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
 .resumeBtn {
   padding: 8px 20px;
   font-size: 0.875rem;
