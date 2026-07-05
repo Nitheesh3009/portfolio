@@ -100,6 +100,32 @@
   justify-content: center;
 }
 
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.socialBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+
+.socialBtn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}
+
 .ctas {
   display: flex;
   flex-wrap: wrap;

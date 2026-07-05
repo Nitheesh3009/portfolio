@@ -99,6 +99,35 @@ export default function Hero() {
               building self-service platforms that improve developer velocity and reliability.
             </p>
 
+            <div className={styles.socials}>
+              <a
+                href="https://www.linkedin.com/in/nitheesh-edla-b01644118"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialBtn}
+                aria-label="LinkedIn"
+              >
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                  <rect x="2" y="2" width="16" height="16" rx="3" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M6 8.5v5M6 5.5v.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                  <path d="M10 13.5v-3a2 2 0 014 0v3M10 8.5v5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/Nitheesh3009"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialBtn}
+                aria-label="GitHub"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z" fill="currentColor" />
+                </svg>
+                GitHub
+              </a>
+            </div>
+
             <div className={styles.ctas}>
               <a href="#contact" className={styles.ctaPrimary}>
                 Hire Me
