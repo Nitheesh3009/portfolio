@@ -40,6 +40,36 @@
   margin-bottom: 32px;
 }
 
+.openToWork {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: 100px;
+  padding: 4px 14px;
+  letter-spacing: 0.02em;
+}
+
+.otwDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+  flex-shrink: 0;
+  animation: otw-pulse 2s ease-in-out infinite;
+}
+
+@keyframes otw-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px #10b981; }
+  50%       { opacity: 0.5; box-shadow: 0 0 12px #10b981; }
+}
+
 .badge {
   font-size: 0.75rem;
   font-weight: 600;

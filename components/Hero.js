@@ -80,6 +80,10 @@ export default function Hero() {
         <div className={styles.twoCol}>
           <div className={styles.left}>
             <div className={styles.badgeRow}>
+              <span className={styles.openToWork}>
+                <span className={styles.otwDot} />
+                Open to Work
+              </span>
               {badges.map((b) => (
                 <span key={b} className={styles.badge}>{b}</span>
               ))}
