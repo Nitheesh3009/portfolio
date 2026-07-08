@@ -1,8 +1,53 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./Hero.module.css";
 import TerminalBlock from "./TerminalBlock";
 import YamlResume from "./YamlResume";
+
+function useCountUp(target, duration = 1400) {
+  const [display, setDisplay] = useState("0");
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const numeric = parseFloat(target.replace(/[^0-9.]/g, ""));
+    const suffix = target.replace(/[0-9.]/g, "");
+    const decimals = target.includes(".") ? target.split(".")[1].replace(/[^0-9]/g, "").length : 0;
+
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        obs.disconnect();
+        const start = performance.now();
+        const tick = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const val = (eased * numeric).toFixed(decimals);
+          setDisplay(val + suffix);
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      },
+      { threshold: 0.5 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [target, duration]);
+
+  return { display, ref };
+}
+
+function AnimatedStat({ value, label }) {
+  const { display, ref } = useCountUp(value);
+  return (
+    <div ref={ref} className={styles.stat}>
+      <span className={styles.statValue}>{display}</span>
+      <span className={styles.statLabel}>{label}</span>
+    </div>
+  );
+}
 
 const badges = [
   "7+ Years Exp",
@@ -157,10 +202,7 @@ export default function Hero() {
 
         <div className={styles.statsRow}>
           {stats.map((s) => (
-            <div key={s.label} className={styles.stat}>
-              <span className={styles.statValue}>{s.value}</span>
-              <span className={styles.statLabel}>{s.label}</span>
-            </div>
+            <AnimatedStat key={s.label} value={s.value} label={s.label} />
           ))}
         </div>
       </div>
