@@ -43,7 +43,7 @@ export default function Navbar() {
           <span className={styles.logoText}>Nitheesh Edla</span>
         </a>
 
-        <nav className={`${styles.links} ${open ? styles.open : ""}`}>
+        <nav aria-label="Main navigation" className={`${styles.links} ${open ? styles.open : ""}`}>
           {links.map((l) => (
             <a
               key={l.href}
@@ -75,6 +75,7 @@ export default function Navbar() {
           className={styles.burger}
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
+          aria-expanded={open}
         >
           <span className={open ? styles.burgerLineTop : ""} />
           <span className={open ? styles.burgerLineMid : ""} />

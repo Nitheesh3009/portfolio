@@ -50,7 +50,7 @@ export default function Contact() {
                 Show Phone Number
               </button>
               <a
-                href="tel:9407582747"
+                href="tel:+19407582747"
                 className={styles.link}
                 style={{ opacity: phoneRevealed ? 1 : 0, pointerEvents: phoneRevealed ? "auto" : "none" }}
                 aria-hidden={!phoneRevealed}

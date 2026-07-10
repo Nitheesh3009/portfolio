@@ -7,7 +7,7 @@ export default function ProjectCard({ project, index }) {
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className={styles.header}>
-        <span className={styles.number}>0{index + 1}</span>
+        <span className={styles.number}>{String(index + 1).padStart(2, "0")}</span>
         <span className={styles.category}>{project.category}</span>
       </div>
 

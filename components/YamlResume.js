@@ -39,7 +39,7 @@ export default function YamlResume() {
 
   return (
     <div className={styles.wrap}>
-      <button className={styles.toggle} onClick={() => setOpen((v) => !v)}>
+      <button className={styles.toggle} onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="yaml-block">
         <span className={styles.toggleIcon}>{open ? "▾" : "▸"}</span>
         <span className={styles.toggleLabel}>
           <span className={styles.keyword}>kind</span>
@@ -50,7 +50,7 @@ export default function YamlResume() {
       </button>
 
       {open && (
-        <div className={styles.block}>
+        <div id="yaml-block" className={styles.block}>
           <div className={styles.lineNums} aria-hidden="true">
             {yaml.map((_, i) => (
               <span key={i}>{i + 1}</span>
