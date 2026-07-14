@@ -109,7 +109,7 @@ export default async function GitHubStrip() {
           </div>
 
           <div className={styles.gridFooter}>
-            <span className={styles.gridLabel}>2 months ago</span>
+            <span className={styles.gridLabel}>{Math.round(DAYS / 30)} months ago</span>
             <div className={styles.legend}>
               <span className={styles.legendLabel}>Less</span>
               {[0, 1, 2, 3, 4].map((l) => (

@@ -145,7 +145,7 @@ export default function ExperienceTimeline() {
               <div className={styles.edu}>
                 <span className={styles.degree}>B.Tech Computer Science</span>
                 <span className={styles.school}>Lovely Professional University</span>
-                <span className={styles.eduYear}>Punjab, India</span>
+                <span className={styles.eduYear}>2013 – 2017 · Punjab, India</span>
               </div>
             </div>
           </div>
