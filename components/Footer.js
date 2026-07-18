@@ -7,6 +7,7 @@ export default function Footer() {
         <span className={styles.copy}>© {new Date().getFullYear()} Nitheesh Edla. Built with Next.js.</span>
         <div className={styles.links}>
           <a href="mailto:nitheeshreddye@gmail.com">Email</a>
+          <a href="https://github.com/Nitheesh3009" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/nitheesh-edla-b01644118" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="/Nitheesh_Edla_Resume.pdf" download>Resume</a>
         </div>
