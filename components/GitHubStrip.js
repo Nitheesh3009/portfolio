@@ -79,7 +79,7 @@ export default async function GitHubStrip() {
           <div className={styles.titleGroup}>
             <span className="section-label">Live Activity</span>
             <h2 className={styles.title}>GitHub Contributions</h2>
-            <p className={styles.sub}>Last 60 days of public activity · updates every hour</p>
+            <p className={styles.sub}>Last {DAYS} days of public activity · updates every hour</p>
           </div>
           <div className={styles.stats}>
             <div className={styles.stat}>
@@ -124,7 +124,7 @@ export default async function GitHubStrip() {
         {recent.length > 0 && (
           <div className={styles.feed}>
             {recent.map((e, i) => (
-              <div key={i} className={styles.feedItem}>
+              <div key={`${e.type}-${e.repo}-${e.date}-${i}`} className={styles.feedItem}>
                 <span className={styles.feedDot} />
                 <span className={styles.feedText}>
                   <span className={styles.feedAction}>{EVENT_LABELS[e.type]}</span>
